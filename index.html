@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Carte Leaflet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/leaflet.css">
+</head>
+<body>
+<header>
+    <h1>Plugin Leaflet.js</h1>
+</header>
+<main>
+    <section id="carte">
+        <div id="map"></div>
+    </section>
+    <section id="modeemploi">
+        <h2>Mode d'emploi d'utilisation du plugin leaflet.js</h2>
+
+        <h3>1. Télécharger Leaflet</h3>
+        <p>
+            Aller sur le site officiel de <a href="https://leafletjs.com" target="_blank">leaflet.</a><br><br>
+            Télécharger Leaflet et extraire les fichiers.<br><br>
+        </p>
+
+        <h3>2. Intégrer Leaflet dans la page HTML</h3>
+        <p>
+            Dans la section <code>&lt;head&gt;</code> ajouter la feuille de style : <br>
+            <code>&lt;link rel="stylesheet" href="leaflet/leaflet.css"&gt;</code><br><br>
+            Avant la fin du <code>&lt;body&gt;</code> ajouter le script JavaScript de Leaflet et la page script : <br>
+            <code>
+                &lt;script src="leaflet/leaflet.js"&gt;&lt;/script&gt;<br>
+                &lt;script src="script.js"&gt;&lt;/script&gt;
+            </code><br><br>
+        </p>
+
+        <h3>3. Ajouter un élément HTML pour la carte</h3>
+        <p>
+            Dans le fichier index.html ajouter un <code>&lt;div&gt;</code> avec un id="map" pour afficher la carte : <br>
+            <code>&lt;div id="map" style="height: 400px;"&gt;&lt;/div&gt;</code><br><br>
+        </p>
+
+        <h3>4. Initialiser la carte avec JavaScript</h3>
+        <p>
+            Dans le fichier script.js ajouter la fonction pour initialiser la carte Leaflet : <br>
+            <code>var map = L.map('id').setView([coordonée x, coordonée y], zoom);</code><br><br>
+            Et la fonction pour afficher les "tiles" de la carte avec openstreetmap : <br>
+            <code>
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', { foo: 'bar', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+            </code><br><br>
+        </p>
+    </section>
+
+    <section id="Marqueur">
+        <h3>Ajouter un marqueur</h3>
+        <p>
+            Dans le fichier script.js ajouter la fonction pour mettre un marqueur : <br>
+            <code>L.marker([coordonnée x, coordonnée y]).addTo(id);</code><br><br>
+            Dans mon cas la fonction sera : <br>
+            <code>L.marker([45.166672, 5.71667]).addTo(map);</code><br><br>
+        </p>
+    </section>
+    <section id="carte">
+        <div id="mapmarqueur"></div>
+    </section>
+
+    <section id="carte">
+        <div id="mapicon"></div>
+    </section>
+
+    <section id="icon">
+        <h3>Ajouter une icon au marqueur</h3>
+        <p>
+            Dans le fichier script.js ajouter la fonction pour mettre un marqueur : <br>
+            <code>L.marker([coordonnée x, coordonnée y]).addTo(id);</code><br><br>
+            Dans mon cas la fonction sera : <br>
+            <code>L.marker([45.166672, 5.71667]).addTo(map);</code><br><br>
+        </p>
+    </section>
+
+</main>
+
+<script src="leaflet/leaflet.js"></script>
+<script src="script.js"></script>
+<footer>
+    GIRAUD Yoni S2D1 DM intégration R212
+</footer>
+</body>
+</html>
